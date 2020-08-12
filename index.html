@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Shop</title>
 	<link rel="stylesheet" type="text/css" href="CSS/base.css" />
 	<link rel="stylesheet" type="text/css" href="CSS/main.css" />
+	<link rel="stylesheet" type="text/css" href="CSS/grid.css" />
+	<link rel="stylesheet" type="text/css" href="CSS/responsive.css" />
 	<link rel="stylesheet" href="fonts/fontawesome-free-5.14.0/css/all.min.css" />
 	<meta charset="UTF-8">
 </head>
@@ -11,8 +16,8 @@
 	<!-- Block Element Modifier -->
 	<div class="app">
 		<header class="header">
-			<div class="grid">
-				<nav class="header__navbar">
+			<div class="grid wide">
+				<nav class="header__navbar hide-on-mobile-tablet">
 					<ul class="header__navbar-list">
 						<li class="header__navbar-item header__navbar-item-has-qr header__navbar-item-separate">
 							Vào cửa hàng trên ứng dụng Minecraft-Shop
@@ -116,11 +121,18 @@
 
 				<!-- Header-with-search -->
 				<div class="header-with-search">
-					<div class="header__logo">
+					<label for="mobile-search-checkbox" class="header__mobile-search">
+						<i class="header__mobile-search-icon fas fa-search"></i>
+					</label>
+
+					<div class="header__logo hide-on-tablet">
 						<a href="" class="header__logo-link">
 							<img src="Images/pickaxe2.png" class="header__logo-img" />
 						</a>
 					</div>
+
+					<input type="checkbox" hidden class="header__search-checkbox" id="mobile-search-checkbox">
+					
 					<div class="header__search">
 						<div class="header__search-input-wrap">
 							<input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm"></input>
@@ -238,16 +250,28 @@
 							</div>
 						</div>	
 					</div>
-				</div>
-
-				
-			</div>	
+				</div>				
+			</div>
+			<ul class="header__sort-bar">
+				<li class="header__sort-item">
+					<a class="header__sort-link">Liên quan</a>
+				</li>
+				<li class="header__sort-item header__sort-item--active">
+					<a class="header__sort-link">Mới nhất</a>
+				</li>
+				<li class="header__sort-item">
+					<a class="header__sort-link">Bán chạy</a>
+				</li>
+				<li class="header__sort-item">
+					<a class="header__sort-link">Giá</a>
+				</li> 
+			</ul>	
 		</header>
 
 		<div class="app__container">
-			<div class="grid">
-				<div class="grid__row app__content">
-					<div class="grid__column-2">
+			<div class="grid wide">
+				<div class="row sm-gutter app__content">
+					<div class="col l-2 m-0 c-0">
 						<nav class="category">
 							<h3 class="category__heading">Danh mục</h3>
 							<ul class="category-list">				
@@ -285,8 +309,8 @@
 						</nav>
 					</div>	
 
-					<div class="grid__column-10">
-						<div class="home-filter">
+					<div class="col l-10 m-12 c-12">
+						<div class="home-filter hide-on-mobile-tablet">
 							<span class="home-filter__label">Sắp xếp theo</span>
 							<button class="home-filter__btn btn">Phổ biến</button>
 							<button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -323,10 +347,43 @@
 							</div>
 						</div>
 
+						<nav class="mobile-category">
+							<ul class="mobile-category__list">
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+								<li class="mobile-category__item">
+									<a href="" class="mobile-category__link">Xe chiến đấu Steve</a>
+								</li>
+							</ul>
+						</nav>
+
 						<div class="home-product">
-							<div class="grid__row">
+							<div class="row sm-gutter">
 								<!-- Product item -->
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/11079p_99c_2x_4a8653c2-cd27-45d0-bffd-a7921e69a90d_590x.jpg?v=1595354591" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bộ đồ chơi lắp ghép Vilager Lego</h4>
@@ -362,7 +419,7 @@
 										</div>
 									</a>
 								</div>	
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/10812p_99c_1x_81a0419b-7f61-407d-8b45-380c5e9aa85d_800x.jpg?v=1595456905" class="home-product-item__img">
 										<h4 class="home-product-item__name">Mô hình Steve cầm khiên</h4>
@@ -398,7 +455,7 @@
 										</div>
 									</a>
 								</div>	
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9709p_99c_2x_3b175a73-09f9-477e-84b1-2942e7e6a390_800x.jpg?v=1590518686" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bộ Adventure Minecraft Lego Ship</h4>
@@ -434,7 +491,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/10346p_107c_1x_10533fe0-5b37-4538-92cb-1f0ca2544a3c_800x.jpg?v=1596131295" class="home-product-item__img">
 										<h4 class="home-product-item__name">Thú nhồi bông Muddy Pig</h4>
@@ -470,7 +527,7 @@
 										</div>
 									</a>
 								</div>	
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/11081p_99c_3x_bf593342-3938-497b-9432-a3c8f6e3402d_800x.jpg?v=1595356083" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bộ lắp ghép PiG & Zombie Lego</h4>
@@ -506,7 +563,7 @@
 										</div>
 									</a>
 								</div>
-																<div class="grid__column-2-4 home-product-item-wrapper">
+																<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9971p_28c_3x_4530673b-904d-48a5-8398-dbf2b0253523_800x.jpg?v=1595977086" class="home-product-item__img">
 										<h4 class="home-product-item__name">Creeper chạy bằng Pin</h4>
@@ -542,7 +599,7 @@
 										</div>
 									</a>
 								</div>
-																<div class="grid__column-2-4 home-product-item-wrapper">
+																<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/11238p_221c_1x_d2da14ce-7456-4065-b80f-453997e2db4f_800x.jpg?v=1593299866" class="home-product-item__img">
 										<h4 class="home-product-item__name">Áo thun in hình Minecraft Mobs</h4>
@@ -578,7 +635,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/8893p_99c_2x_cd42fbb2-e2c4-49b0-8dde-b794ab0e1461_800x.jpg?v=1595278700" class="home-product-item__img">
 										<h4 class="home-product-item__name">Cốc lạc đà Llama làm bằng gốm</h4>
@@ -614,7 +671,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9864p_99c_3x_7306163c-d05d-4eeb-bb29-a7eb80c2053e_800x.jpg?v=1596131598" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bình nước giữ nhiệt Alex & Steve</h4>
@@ -650,7 +707,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/10871p_99c_1x_305ba7ed-cdcd-4467-91bd-bdb94cec0e8c_912x.jpg?v=1595543894" class="home-product-item__img">
 										<h4 class="home-product-item__name">Hộp túi gồm 3 khăn tắm Minecraft</h4>
@@ -686,7 +743,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9438p_99c_1x_3f9dfa3d-c182-4d65-a825-f57737d96922_800x.jpg?v=1595539676" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bình nước có ống hút đi kèm</h4>
@@ -722,7 +779,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9413p_99c_1x_649675e7-60b7-4f1a-a554-1092f342fc26_800x.jpg?v=1586453227" class="home-product-item__img">
 										<h4 class="home-product-item__name">Khăn giữ ấm vào mùa đông</h4>
@@ -758,7 +815,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/9735p_99c_1x_08e5055f-a3dc-4af5-94be-ba6e86502d45_800x.jpg?v=1595457191" class="home-product-item__img">
 										<h4 class="home-product-item__name">Gối ngủ đầu Creeper</h4>
@@ -794,7 +851,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/11636p_99c_1x_ddf8cdf2-9483-4de9-8df3-1bcc18434f6c_800x.jpg?v=1595456960" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bao gối đầu Minecraft Friend or Fore</h4>
@@ -830,7 +887,7 @@
 										</div>
 									</a>
 								</div>
-								<div class="grid__column-2-4 home-product-item-wrapper">
+								<div class="col l-2-4 m-4 c-6">
 									<a href="" class="home-product-item">
 										<img src="https://cdn.shopify.com/s/files/1/0251/2155/4510/products/11626p_99c_1x_fd6e9fb2-76ca-4703-9388-e15567cfef13_800x.jpg?v=1595457081" class="home-product-item__img">
 										<h4 class="home-product-item__name">Bộ giường ngủ Minecraft</h4>
@@ -909,14 +966,14 @@
 		</div>
 
 		<footer class="footer">
-			<div class="grid">
-				<div class="grid__row">
-					<div class="grid__column-2-4">
+			<div class="grid wide footer__content">
+				<div class="row">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Chăm sóc khách hàng</h3>
 						<ul class="footer-list">
 							<li class="footer-item">
 								<a href="" class="footer-item__link">Trung tâm trợ giúp</a>
-							</li>
+				 			</li>
 							<li class="footer-item">
 								<a href="" class="footer-item__link">Minecraft-Shop</a>
 							</li>
@@ -925,7 +982,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Giới thiệu</h3>
 						<ul class="footer-list">
 							<li class="footer-item">
@@ -939,7 +996,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Danh mục</h3>
 						<ul class="footer-list">
 							<li class="footer-item">
@@ -953,7 +1010,7 @@
 							</li>
 						</ul>	
 					</div>		
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-4 c-6">
 						<h3 class="footer__heading">Theo dõi chúng tôi</h3>
 						<ul class="footer-list">
 							<li class="footer-item">
@@ -976,7 +1033,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="grid__column-2-4">
+					<div class="col l-2-4 m-8 c-12">
 						<h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
 						<div class="footer__download">
 							<img src="Images/pickaxe.png" alt="Download QR" class="footer__download-qr"></img>
@@ -994,7 +1051,7 @@
 			</div>
 
 			<div class="footer__bottom">
-				<div class="grid">
+				<div class="grid wide">
 					<p class="footer__text">© 2020 - Bản quyền thuộc về Minecraft-Shop</p>
 				</div>
 			</div>
