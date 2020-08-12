@@ -3,6 +3,11 @@
 	--text-color: #212121;
 	--white-color: white;
 	--star-gold-color: #FFCE3E;
+
+	--header-height: 143px;
+	--navbar-height: 33px;
+	--header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+	--header-sort-bar-height: 46px;
 }
 
 /* Button Style */
@@ -65,42 +70,7 @@
 	}
 }
 
-/*hover: f8642e*/
-
-/* --header-height: 220px;
- --navbar-height: 37px;
- --header-with-search-height: calc(var(--header-height) - var(--navbar-height))*/
-
- /*.btn:hover {
-	background-color: rgba(0, 0, 0, 0.1);	
-}
-*/
-
-/*.header__navbar-user-menu::before {
-	content: "";
-    border-style: solid;
-    border-width: 20px 30px;
-    border-color: transparent transparent white transparent;
-    position: absolute;
-    right: 23px;
-    top: -30px;
-}*/
-
-
-/*transform-origin: calc(100% - 32px) top;
-will-change: opacity, transform;
-
-rgba(0, 0, 0, 0.5);
-
-top: calc(100% - 1px);
-*/
 /* Responsive */
-.grid {
-	width: 1450px;
-	max-width: 100%;
-	margin: 0 auto;
-}
-
 .grid__row {
 	display: flex;
 	flex-wrap: wrap;
@@ -222,3 +192,5 @@ top: calc(100% - 1px);
 	text-align: center;
 	border-radius: 2px;
 }
+
+
