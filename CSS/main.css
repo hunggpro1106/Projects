@@ -514,7 +514,7 @@ html {
 }
 
 .nav__mobile-list {
-
+	padding-left: 0;
 }
 
 .nav__link {
