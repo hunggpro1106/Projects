@@ -511,6 +511,7 @@ html {
 	opacity: 0;
 	transition: transform linear 0.2s, opacity ease 0.2s;
 	display: none;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav__mobile-list {
@@ -556,6 +557,7 @@ html {
 	display: flex;
 	align-items: center;
 	margin: 0 8px;
+	position: relative;
 }
 
 .mobile__menu-btn {
@@ -568,7 +570,9 @@ html {
 
 .mobile__menu-icon {
 	color: white;
-	font-size: 2.1rem;
+	font-size: 2.2rem;
+    position: relative;
+    left: 4px;
 }
 
 .nav__overlay {
@@ -586,15 +590,18 @@ html {
 .header__mobile-search {
 	padding: 0 12px;
 	display: none;
+	position: absolute;
+    left: 39px;
+    top: 23px;
 }
 
 .header__mobile-search-icon {
-	font-size: 2rem;
+	font-size: 1.3rem;
 	color: white;
 }
 
 .header__logo {
-	width: 200px ;
+	width: 200px;
 }
 
 /* Some web no support */
@@ -611,9 +618,9 @@ html {
 
 .header__logo-img  {
 	position: relative;
-    top: 10px;
-    left: -18px;
-	width: 110%	;
+    top: -5px;
+    left: 11px;
+    width: 90%;
 }
 
 .header__search {
@@ -1012,6 +1019,17 @@ html {
 	color: var(--var-color);
 }
 
+.header__sort-item--active .header__sort-link::after {
+	content: "";
+	position: absolute;
+	background-color: var(--var-color);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	width: 100%;
+}
+
 .header__sort-item:first-child .header__sort-link::before {
 	display: none;
 }
@@ -1248,6 +1266,8 @@ html {
 	display: flex;
 	align-items: baseline;
 	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-right: 3px;
 }
 
 .home-product-item__price-old {
