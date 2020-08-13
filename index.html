@@ -119,20 +119,66 @@
 					</ul>
 				</nav>
 
+				<input type="checkbox" hidden class="nav__input" id="nav-mobile-input"></input>
+
+				<div class="nav__mobile">
+					<ul class="nav__mobile-list">
+						<h3 class="category__heading">Danh mục</h3>
+						<ul class="category-list">				
+							<li class="category-item category-item--active">
+								<a href="#" class="category-item__link">Đồ bán chạy hôm nayĐồ bán chạy hôm nayĐồ bán chạy hôm nayĐồ bán chạy hôm nayĐồ bán chạy hôm nay</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Bình giữ nhiệt</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Bộ lắp ghép Minecraft</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Hộp bút chì Creeper</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Túi khăn tắm 3 hộp</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Balo Creeper</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Móc khóa Diamond Word</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Bộ lắp ghép Bàn chế tạo</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Hộp thẻ bài 4 người</a>
+							</li>
+							<li class="category-item">
+								<a href="#" class="category-item__link">Cốc lạc đà Llama</a>
+							</li>
+						</ul>	
+					</ul>
+					<label for="nav-mobile-input" class="nav__mobile-close">
+						<i class="nav__mobile-close--icon fas fa-times"></i>
+					</label>
+				</div>
+
+				<label for="nav-mobile-input" class="nav__overlay"></label>
+
 				<!-- Header-with-search -->
 				<div class="header-with-search">
+					<label for="nav-mobile-input" class="mobile__menu-btn">
+						<i class="mobile__menu-icon fas fa-bars"></i>						
+					</label>
 					<label for="mobile-search-checkbox" class="header__mobile-search">
 						<i class="header__mobile-search-icon fas fa-search"></i>
 					</label>
+					<input type="checkbox" hidden class="header__search-checkbox" id="mobile-search-checkbox">
 
 					<div class="header__logo hide-on-tablet">
 						<a href="" class="header__logo-link">
 							<img src="Images/pickaxe2.png" class="header__logo-img" />
 						</a>
-					</div>
-
-					<input type="checkbox" hidden class="header__search-checkbox" id="mobile-search-checkbox">
-					
+					</div>										
 					<div class="header__search">
 						<div class="header__search-input-wrap">
 							<input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm"></input>
@@ -254,16 +300,16 @@
 			</div>
 			<ul class="header__sort-bar">
 				<li class="header__sort-item">
-					<a class="header__sort-link">Liên quan</a>
+					<a href="" class="header__sort-link">Liên quan</a>
 				</li>
 				<li class="header__sort-item header__sort-item--active">
-					<a class="header__sort-link">Mới nhất</a>
+					<a href="" class="header__sort-link">Mới nhất</a>
 				</li>
 				<li class="header__sort-item">
-					<a class="header__sort-link">Bán chạy</a>
+					<a href="" class="header__sort-link">Bán chạy</a>
 				</li>
 				<li class="header__sort-item">
-					<a class="header__sort-link">Giá</a>
+					<a href="" class="header__sort-link">Giá</a>
 				</li> 
 			</ul>	
 		</header>
